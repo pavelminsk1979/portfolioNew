@@ -1,3 +1,9 @@
-export function App() {
-  return <div>Hello!!!</div>
+import { Outlet } from 'react-router-dom'
+
+export const App = () => {
+  return (
+    <div>
+      <Outlet />
+    </div>
+  )
 }
