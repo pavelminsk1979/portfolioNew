@@ -1,15 +1,13 @@
-import { useNavigate } from 'react-router-dom'
+import st from './Info.module.scss'
+
+import myFotoBlack from '../../assets/image/meY.png'
+import { ShortInfo } from '../../components/shortInfo/ShortInfo'
 
 export const Info = () => {
-  const navigate = useNavigate()
-  const handleOnClickNavigate = () => {
-    navigate('/')
-  }
-
   return (
-    <div>
-      <div onClick={handleOnClickNavigate}>Вернутся на главную</div>
-      <div>КРАТКО ОБО МНЕ </div>
+    <div className={st.main}>
+      <ShortInfo />
+      <img alt={'Моя фотография'} className={st.image} src={myFotoBlack} />
     </div>
   )
 }
