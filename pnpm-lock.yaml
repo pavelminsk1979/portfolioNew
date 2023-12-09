@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/roboto-condensed':
+    specifier: ^5.0.14
+    version: 5.0.14
   '@types/react-router-dom':
     specifier: ^5.3.3
     version: 5.3.3
@@ -564,6 +567,10 @@ packages:
     resolution: {integrity: sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/roboto-condensed@5.0.14:
+    resolution: {integrity: sha512-ZNBHUhE5/3z9efMIjpBblFsfLHgGotJjlzKd5Q8DODbkRRWy6Yh+JnbiaJZ8zwQyHyYBNOolk57BG4BcjSzrRg==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
