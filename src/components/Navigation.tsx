@@ -4,7 +4,6 @@ import { SwitchComponent } from './switchComponent/SwitchComponent'
 
 export const Navigation = () => {
   const handlerOnChackedChange = (checked: boolean) => {
-    console.log(checked)
     document.body.classList.toggle('dark-mode', checked)
   }
 

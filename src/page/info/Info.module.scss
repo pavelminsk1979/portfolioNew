@@ -1,9 +1,16 @@
-.main {
+.blokTwoImg {
   height: 100vh;
+  display: flex;
+  overflow-x: hidden;
 }
 
 .image {
   width: auto;
   height: 100%;
-  /* filter: brightness(70%);*/
+}
+
+.imageFon {
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
 }
