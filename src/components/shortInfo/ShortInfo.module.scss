@@ -18,7 +18,6 @@ span {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);
-  color: #2b2d32;
 }
 
 .blockContent {
@@ -49,8 +48,8 @@ span {
 }
 
 .upLt {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-top: 8px solid var(--color-danger-900);
   border-left: 8px solid var(--color-danger-900);
   border-right-width: 0;
@@ -58,17 +57,37 @@ span {
 }
 
 .upRt {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-top: 8px solid var(--color-danger-900);
   border-left-width: 0;
   border-right: 8px solid var(--color-danger-900);
   border-bottom-width: 0;
 }
 
+.blockText {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  width: 85%;
+  height: 100%;
+  text-align: center;
+}
+
+p {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-l);
+}
+
 .lowLt {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-top-width: 0;
   border-left: 8px solid var(--color-danger-900);
   border-right-width: 0;
@@ -76,8 +95,8 @@ span {
 }
 
 .lowRt {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-top-width: 0;
   border-left-width: 0;
   border-right: 8px solid var(--color-danger-900);
