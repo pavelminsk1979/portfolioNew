@@ -1,5 +1,5 @@
 .main {
-  padding: 10px;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -9,7 +9,6 @@
 }
 
 .header {
-  padding: 10px;
   width: 70%;
   height: 50px;
   cursor: pointer;
@@ -17,8 +16,72 @@
 
 span {
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-xl);
-  color: white;
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  color: #2b2d32;
+}
+
+.blockContent {
+  max-width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 90px;
+}
+
+.frame {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upperAngles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lowerAngles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upLt {
+  width: 80px;
+  height: 80px;
+  border-top: 8px solid var(--color-danger-900);
+  border-left: 8px solid var(--color-danger-900);
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+.upRt {
+  width: 80px;
+  height: 80px;
+  border-top: 8px solid var(--color-danger-900);
+  border-left-width: 0;
+  border-right: 8px solid var(--color-danger-900);
+  border-bottom-width: 0;
+}
+
+.lowLt {
+  width: 80px;
+  height: 80px;
+  border-top-width: 0;
+  border-left: 8px solid var(--color-danger-900);
+  border-right-width: 0;
+  border-bottom: 8px solid var(--color-danger-900);
+}
+
+.lowRt {
+  width: 80px;
+  height: 80px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right: 8px solid var(--color-danger-900);
+  border-bottom: 8px solid var(--color-danger-900);
 }
 
 .switchDarkTheme {

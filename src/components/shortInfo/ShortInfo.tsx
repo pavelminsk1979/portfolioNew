@@ -20,7 +20,18 @@ export const ShortInfo = () => {
       <div className={st.header} onClick={handleOnClickNavigate}>
         <span onClick={handleOnClickNavigate}>вернуться на главную</span>
       </div>
-
+      <div className={st.blockContent}>
+        <div className={st.frame}>
+          <div className={st.upperAngles}>
+            <div className={st.upLt} />
+            <div className={st.upRt} />
+          </div>
+          <div className={st.lowerAngles}>
+            <div className={st.lowLt} />
+            <div className={st.lowRt} />
+          </div>
+        </div>
+      </div>
       <div className={st.switchDarkTheme}>
         <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
       </div>
