@@ -31,10 +31,10 @@ export const ShortInfo = () => {
           <div className={st.blockText}>
             <div className={st.text}>
               <p>
-                Павел Потапов. Фронденд разработчик. Мой стек технологий включает: React,
-                Redux,Redux Toolkit, RTK Query, JavaScript,TypeScript,GIT , SCSS. Разрабатываю
-                компоненты, покрываю код тестами.Имею опыт работы с различными UI-библиотеками.Опыт
-                работы в комерческой разработке 1 год 6 месяцев. <br /> pavvel.potapov@gmail.com
+                Павел Потапов. Фронденд разработчик. Мой стек технологий включает: React,Redux,Redux
+                Toolkit,RTK Query,JavaScript,TypeScript, GIT , SCSS. Разрабатываю компоненты,
+                покрываю код тестами.Имею опыт работы с различными UI-библиотеками.Опыт работы в
+                комерческой разработке 1 год 6 месяцев. <br /> pavvel.potapov@gmail.com
                 <br />
                 https://t.me/pavvelpotapov
               </p>
