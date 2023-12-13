@@ -1,11 +1,13 @@
 .main {
-  position: fixed;
-
   width: 900px;
   height: 60px;
-  margin: 20px;
+  margin: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  backdrop-filter: blur(3px);
+.block {
+  width: 700px;
   color: var(--color-warning-100);
   display: flex;
   justify-content: space-around;

@@ -1,0 +1,43 @@
+.main {
+  padding: 30px;
+}
+
+.textScil {
+  width: 180px;
+  height: 100px;
+  background-color: var(--color-dark-700);
+  position: relative;
+  border-radius: 15px;
+}
+
+.text {
+  position: absolute;
+  top: 52px;
+  left: 47px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+}
+
+.iconScil {
+  width: 85px;
+  height: 82px;
+  border-radius: 48px;
+  background-color: var(--color-dark-700);
+  border: 8px solid var(--color-dark-900);
+  position: absolute;
+  top: -37px;
+  left: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+}
+
+.textScil:hover {
+  box-shadow: 0 5px 10px var(--color-light-100);
+}

@@ -16,14 +16,15 @@ export const Navigation = () => {
 
   return (
     <div className={st.main}>
-      <span className={st.headersText} onClick={handleOnClickNavigate}>
-        КРАТКО
-      </span>
-      <span className={st.headersText}>ГЛАВНАЯ</span>
-      <span className={st.headersText}>ПРОЕКТЫ</span>
-      <span className={st.headersText}>КОНТАКТЫ</span>
-      <span className={st.headersTextQestion}>ЗАДАТЬ ВОПРОС</span>
-      <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
+      <div className={st.block}>
+        <span className={st.headersText} onClick={handleOnClickNavigate}>
+          КРАТКО
+        </span>
+        <span className={st.headersText}>ПРОЕКТЫ</span>
+        <span className={st.headersText}>КОНТАКТЫ</span>
+        <span className={st.headersTextQestion}>ЗАДАТЬ ВОПРОС</span>
+        <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
+      </div>
     </div>
   )
 }
