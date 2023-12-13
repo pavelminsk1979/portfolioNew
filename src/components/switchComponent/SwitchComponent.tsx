@@ -7,12 +7,8 @@ type PropsType = {
 }
 export const SwitchComponent = ({ handlerOnChackedChange }: PropsType) => {
   return (
-    <div>
-      <div>
-        <Switch.Root className={st.SwitchRoot} onCheckedChange={handlerOnChackedChange}>
-          <Switch.Thumb className={st.SwitchThumb} />
-        </Switch.Root>
-      </div>
-    </div>
+    <Switch.Root className={st.SwitchRoot} onCheckedChange={handlerOnChackedChange}>
+      <Switch.Thumb className={st.SwitchThumb} />
+    </Switch.Root>
   )
 }

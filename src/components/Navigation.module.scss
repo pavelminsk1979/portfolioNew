@@ -1,10 +1,48 @@
 .main {
   position: fixed;
 
-  width: 150px;
-  height: 30px;
+  width: 900px;
+  height: 60px;
+  margin: 20px;
 
   backdrop-filter: blur(3px);
-  border: 1px solid red;
   color: var(--color-warning-100);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.headersText {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid var(--color-dark-700);
+}
+
+.headersTextQestion {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid var(--color-dark-700);
+}
+
+.headersText:hover,
+.headersTextQestion:hover {
+  background-color: var(--color-dark-1000);
+  box-shadow: 0 0 25px var(--color-light-100);
 }

@@ -20,7 +20,9 @@ export const ShortInfo = () => {
   return (
     <div className={st.main}>
       <div className={st.header} onClick={handleOnClickNavigate}>
-        <span onClick={handleOnClickNavigate}>вернуться на главную</span>
+        <span className={st.textReturnMain} onClick={handleOnClickNavigate}>
+          вернуться на главную
+        </span>
       </div>
 
       <div className={st.blockContent}>
@@ -32,7 +34,7 @@ export const ShortInfo = () => {
 
           <div className={st.blockText}>
             <div className={st.text}>
-              <p>
+              <p className={st.contentText}>
                 Павел Потапов. Фронденд разработчик. Мой стек технологий включает: React,Redux,Redux
                 Toolkit,RTK Query,JavaScript,TypeScript, GIT , SCSS. Покрытие кода тестами.Имею опыт
                 работы с различными UI-библиотеками.Опыт работы в комерческой разработке 1 год 6
