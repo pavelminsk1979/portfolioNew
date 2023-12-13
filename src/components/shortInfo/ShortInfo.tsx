@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 
 import st from './ShortInfo.module.scss'
 
-import { SwitchComponent } from '../switchComponent/SwitchComponent'
+import telegramImage from '../../assets/image/telegr.jpg'
 
 export const ShortInfo = () => {
   const navigate = useNavigate()
@@ -11,8 +11,10 @@ export const ShortInfo = () => {
     navigate('/')
   }
 
-  const handlerOnChackedChange = (checked: boolean) => {
-    document.body.classList.toggle('dark-mode', checked)
+  document.body.classList.toggle('dark-mode', true)
+
+  const telegramFoto = {
+    backgroundImage: `url(${telegramImage})`,
   }
 
   return (
@@ -32,9 +34,9 @@ export const ShortInfo = () => {
             <div className={st.text}>
               <p>
                 Павел Потапов. Фронденд разработчик. Мой стек технологий включает: React,Redux,Redux
-                Toolkit,RTK Query,JavaScript,TypeScript, GIT , SCSS. Разрабатываю компоненты,
-                покрываю код тестами.Имею опыт работы с различными UI-библиотеками.Опыт работы в
-                комерческой разработке 1 год 6 месяцев. <br /> pavvel.potapov@gmail.com
+                Toolkit,RTK Query,JavaScript,TypeScript, GIT , SCSS. Покрытие кода тестами.Имею опыт
+                работы с различными UI-библиотеками.Опыт работы в комерческой разработке 1 год 6
+                месяцев. <br /> pavvel.potapov@gmail.com
                 <br />
                 https://t.me/pavvelpotapov
               </p>
@@ -47,8 +49,10 @@ export const ShortInfo = () => {
           </div>
         </div>
       </div>
-      <div className={st.switchDarkTheme}>
-        <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
+      <div className={st.pictureBlock}>
+        <a href={'https://t.me/pavvelpotapov'}>
+          <div className={st.picture} style={telegramFoto}></div>
+        </a>
       </div>
     </div>
   )
