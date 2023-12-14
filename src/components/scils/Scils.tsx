@@ -56,7 +56,7 @@ export const Scils = () => {
       iconSkill: <GrReactjs className={st.icon} />,
       id: '9',
       textSkill: 'TYPESCRIPT',
-      width: '240px',
+      width: '260px',
     },
     {
       iconSkill: <GrReactjs className={st.icon} />,

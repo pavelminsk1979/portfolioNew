@@ -1,8 +1,6 @@
 .main {
-  padding: 20px;
-  max-width: 80vw;
+  width: 100%;
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -13,7 +11,7 @@
   background-color: var(--color-dark-700);
   position: relative;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .text {
