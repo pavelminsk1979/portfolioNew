@@ -1,4 +1,13 @@
+import { BsFiletypeScss } from 'react-icons/bs'
+import { FaFigma } from 'react-icons/fa'
+import { FaGitAlt } from 'react-icons/fa6'
 import { GrReactjs } from 'react-icons/gr'
+import { IoLogoJavascript } from 'react-icons/io'
+import { PiFileHtml } from 'react-icons/pi'
+import { SiRedux } from 'react-icons/si'
+import { SiReactquery } from 'react-icons/si'
+import { TbBrandStorybook } from 'react-icons/tb'
+import { TbBrandTypescript } from 'react-icons/tb'
 
 import st from './Scils.module.scss'
 
@@ -11,7 +20,7 @@ export const Scils = () => {
       width: '180px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <SiRedux className={st.icon} />,
       id: '2',
       textSkill: 'REDUX',
       width: '180px',
@@ -23,51 +32,51 @@ export const Scils = () => {
       width: '300px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <FaFigma className={st.icon} />,
       id: '4',
       textSkill: 'FIGMA',
       width: '180px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <TbBrandStorybook className={st.icon} />,
       id: '5',
       textSkill: 'STORYBOOK',
       width: '240px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <FaGitAlt className={st.icon} />,
       id: '6',
       textSkill: 'GIT',
       width: '180px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <SiReactquery className={st.icon} />,
       id: '7',
       textSkill: 'RTK QUERU',
       width: '240px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <IoLogoJavascript className={st.icon} />,
       id: '8',
       textSkill: 'JAVASCRIPT',
       width: '240px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <TbBrandTypescript className={st.icon} />,
       id: '9',
       textSkill: 'TYPESCRIPT',
       width: '260px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <PiFileHtml className={st.icon} />,
       id: '8',
       textSkill: 'HTML&CSS',
       width: '240px',
     },
     {
-      iconSkill: <GrReactjs className={st.icon} />,
+      iconSkill: <BsFiletypeScss className={st.icon} />,
       id: '9',
-      textSkill: 'SASS',
+      textSkill: 'SCSS',
       width: '180px',
     },
   ]
@@ -88,10 +97,10 @@ export const Scils = () => {
 
 {
   /*   <div className={st.textScil}>
-              <span className={st.text}>REACT</span>
-      
-              <div className={st.iconScil}>
-                <GrReactjs className={st.icon} />
-              </div>
-            </div>*/
+                <span className={st.text}>REACT</span>
+        
+                <div className={st.iconScil}>
+                  <GrReactjs className={st.icon} />
+                </div>
+              </div>*/
 }
