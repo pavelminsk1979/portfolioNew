@@ -94,13 +94,3 @@ export const Scils = () => {
     </div>
   )
 }
-
-{
-  /*   <div className={st.textScil}>
-                <span className={st.text}>REACT</span>
-        
-                <div className={st.iconScil}>
-                  <GrReactjs className={st.icon} />
-                </div>
-              </div>*/
-}

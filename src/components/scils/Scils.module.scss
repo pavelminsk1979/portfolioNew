@@ -1,40 +1,46 @@
 .main {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
 }
 
 .textScil {
+  position: relative;
+
   width: 180px;
   height: 100px;
-  background-color: var(--color-dark-700);
-  position: relative;
-  border-radius: 15px;
   margin-top: 60px;
+
+  background-color: var(--color-dark-700);
+  border-radius: 15px;
 }
 
 .text {
   position: absolute;
   top: 52px;
   left: 47px;
+
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-bold);
 }
 
 .iconScil {
-  width: 85px;
-  height: 82px;
-  border-radius: 48px;
-  background-color: var(--color-dark-700);
-  border: 8px solid var(--color-dark-900);
   position: absolute;
   top: -37px;
   left: 46px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  width: 85px;
+  height: 82px;
+
+  background-color: var(--color-dark-700);
+  border: 8px solid var(--color-dark-900);
+  border-radius: 48px;
 }
 
 .icon {
