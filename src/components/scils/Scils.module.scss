@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 75%;
+  margin: 30px;
 }
 
 .textScil {
@@ -50,4 +51,28 @@
 
 .textScil:hover {
   box-shadow: 0 5px 10px var(--color-light-100);
+}
+
+@media screen and (width <= 1250px) {
+  .main {
+    width: 85%;
+  }
+}
+
+@media screen and (width <= 1000px) {
+  .main {
+    width: 75%;
+  }
+}
+
+@media screen and (width <= 700px) {
+  .main {
+    width: 95%;
+  }
+}
+
+@media screen and (width <= 390px) {
+  .main {
+    justify-content: center;
+  }
 }
