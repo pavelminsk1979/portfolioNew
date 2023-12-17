@@ -4,10 +4,8 @@ import { FaGitAlt } from 'react-icons/fa6'
 import { GrReactjs } from 'react-icons/gr'
 import { IoLogoJavascript } from 'react-icons/io'
 import { PiFileHtml } from 'react-icons/pi'
-import { SiRedux } from 'react-icons/si'
-import { SiReactquery } from 'react-icons/si'
-import { TbBrandStorybook } from 'react-icons/tb'
-import { TbBrandTypescript } from 'react-icons/tb'
+import { SiReactquery, SiRedux } from 'react-icons/si'
+import { TbBrandStorybook, TbBrandTypescript } from 'react-icons/tb'
 
 import st from './Scils.module.scss'
 
