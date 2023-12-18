@@ -67,11 +67,27 @@
 
 @media screen and (width <= 700px) {
   .main {
-    width: 95%;
+    width: 80%;
+    margin: 5px;
+  }
+
+  .iconScil {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .textScil {
+    transform: scale(0.7);
+    border-radius: 10px;
   }
 }
 
-@media screen and (width <= 390px) {
+@media screen and (width <= 465px) {
   .main {
     justify-content: center;
   }
