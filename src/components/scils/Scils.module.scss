@@ -4,6 +4,7 @@
   justify-content: space-between;
   width: 75%;
   margin: 30px;
+  gap: 20px;
 }
 
 .textScil {
@@ -91,4 +92,45 @@
   .main {
     justify-content: center;
   }
+}
+
+.textScilMobile {
+  position: relative;
+
+  width: 100px;
+  height: 60px;
+  margin-top: 60px;
+
+  background-color: var(--color-dark-700);
+  border-radius: 10px;
+}
+
+.textMobile {
+  position: absolute;
+  top: 26px;
+  left: 22px;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-l);
+}
+
+.textScilMobile:hover {
+  box-shadow: 0 4px 6px var(--color-light-100);
+}
+
+.iconScilMobile {
+  position: absolute;
+  top: -37px;
+  left: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  background-color: var(--color-dark-700);
+  border: 8px solid var(--color-dark-900);
+  border-radius: 38px;
 }
