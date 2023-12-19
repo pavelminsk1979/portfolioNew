@@ -7,6 +7,7 @@ import st from './Works.module.scss'
 
 import imgSamuraiWai from '../../assets/image/fotoSamuraiWay.jpg'
 import imgMySocial from '../../assets/image/mySamuraiWai.jpg'
+import imgSamuraiWaiLogin from '../../assets/image/mySamuraiWaiLogin.jpg'
 import imgSocial from '../../assets/image/social.png'
 import {
   handleClickLeftArrowNewProjects,
@@ -15,7 +16,7 @@ import {
 
 export const Works = () => {
   const [currentFotoProject, setCurrentFotoProject] = useState(imgSocial)
-  const imgsAloneProject = [imgSocial, imgSamuraiWai, imgMySocial]
+  const imgsAloneProject = [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin]
   const handleClickLeftNextFotoProject = () => {
     let curentIndex = imgsAloneProject.indexOf(currentFotoProject)
 
