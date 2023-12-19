@@ -14,7 +14,7 @@
 
 @media (width <= 1000px) {
   .block {
-    display: block; /* Показываем обертки на экранах шире 1000px */
+    display: block;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,10 +36,16 @@
 
 @media (width <= 450px) {
   .block {
-    display: block; /* Показываем обертки на экранах шире 1000px */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+    gap: 35px;
+  }
+
+  .header {
+    font-size: var(--font-size-xxl);
+  }
+
+  .leftArrow,
+  .rightArrow {
+    width: 25px;
+    height: 25px;
   }
 }
