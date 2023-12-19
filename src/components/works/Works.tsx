@@ -68,6 +68,7 @@ export const Works = () => {
               onClick={handleClickRightNextFotoProject}
             />
           </div>
+          <button className={st.outputButton}>ВХОД НА ПРЕЗЕНТАЦИЮ ПРОЕКТА</button>
         </div>
       </div>
       <div className={st.rightArrowWrapper}>
