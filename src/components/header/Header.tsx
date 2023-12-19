@@ -2,12 +2,23 @@ import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-ico
 
 import st from './Header.module.scss'
 
+import {
+  handleClickLeftArrowNewProjects,
+  handleClickRighttArrowNewProjects,
+} from '../../utils/utils'
+
 export const Header = () => {
   return (
     <div className={st.block}>
-      <BsFillArrowLeftSquareFill className={st.leftArrow} />
+      <BsFillArrowLeftSquareFill
+        className={st.leftArrow}
+        onClick={handleClickLeftArrowNewProjects}
+      />
       <h2 className={st.header}>ПРОЕКТЫ</h2>
-      <BsFillArrowRightSquareFill className={st.rightArrow} />
+      <BsFillArrowRightSquareFill
+        className={st.rightArrow}
+        onClick={handleClickRighttArrowNewProjects}
+      />
     </div>
   )
 }

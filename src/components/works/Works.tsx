@@ -2,25 +2,26 @@ import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-ico
 
 import st from './Works.module.scss'
 
-/*export const Works = () => {
-  return (
-    <div className={st.main}>
-      <BsFillArrowLeftSquareFill className={st.leftArrowBig} />
-      <div className={st.frame}></div>
-      <BsFillArrowRightSquareFill className={st.rightArrowBig} />
-    </div>
-  )
-}*/
+import {
+  handleClickLeftArrowNewProjects,
+  handleClickRighttArrowNewProjects,
+} from '../../utils/utils'
 
 export const Works = () => {
   return (
     <div className={st.main}>
       <div className={st.leftArrowWrapper}>
-        <BsFillArrowLeftSquareFill className={st.leftArrowBig} />
+        <BsFillArrowLeftSquareFill
+          className={st.leftArrowBig}
+          onClick={handleClickLeftArrowNewProjects}
+        />
       </div>
       <div className={st.frame}></div>
       <div className={st.rightArrowWrapper}>
-        <BsFillArrowRightSquareFill className={st.rightArrowBig} />
+        <BsFillArrowRightSquareFill
+          className={st.rightArrowBig}
+          onClick={handleClickRighttArrowNewProjects}
+        />
       </div>
     </div>
   )
