@@ -1,29 +1,65 @@
 .main {
-  /* border: 1px solid red;*/
-  min-width: 85%;
-  height: 85vh;
   display: flex;
   align-items: center;
-  margin: 60px 0;
+
+  min-width: 85%;
+  height: 85vh;
+  margin: 40px 0;
 }
 
 .frame {
-  border: 3px solid var(--color-light-300);
-  border-radius: 20px;
   min-width: 93%;
   height: 100%;
   margin-left: -8px;
+
+  border: 3px solid var(--color-light-300);
+  border-radius: 20px;
 }
 
 .rightArrowBig {
+  cursor: pointer;
   width: 50px;
   height: 50px;
-  cursor: pointer;
   margin-left: -12px;
 }
 
 .leftArrowBig {
+  cursor: pointer;
   width: 50px;
   height: 50px;
-  cursor: pointer;
+}
+
+.rightArrowBig:hover,
+.leftArrowBig:hover {
+  transform: scale(1.1);
+}
+
+.leftArrowWrapper,
+.rightArrowWrapper {
+  display: none; /* Скрываем обертки на маленьких экранах */
+}
+
+@media (width >= 1000px) {
+  .leftArrowWrapper,
+  .rightArrowWrapper {
+    display: block; /* Показываем обертки на экранах шире 1000px */
+  }
+}
+
+@media (width <= 1000px) {
+  .frame {
+    min-width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    border: 2px solid var(--color-light-300);
+  }
+}
+
+@media (width <= 450px) {
+  .frame {
+    min-width: 111%;
+    height: 90%;
+    margin-left: -18px;
+    margin-top: -55px;
+  }
 }
