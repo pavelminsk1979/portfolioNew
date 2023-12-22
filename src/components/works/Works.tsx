@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi'
 import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-icons/bs'
 
