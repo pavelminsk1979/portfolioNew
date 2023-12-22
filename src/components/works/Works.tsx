@@ -14,20 +14,36 @@ import imgTask2 from '../../assets/image/task2.jpg'
 import imgTask3 from '../../assets/image/task3.jpg'
 import imgTask4 from '../../assets/image/task4jpg.jpg'
 import imgTaskMain from '../../assets/image/taskMain.jpg'
-import {
-  handleClickLeftArrowNewProjects,
-  handleClickRighttArrowNewProjects,
-} from '../../utils/utils'
 
 export const Works = () => {
   const data = [
-    { imgsAloneProject: [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin] },
-    { imgsAloneProject: [imgTaskMain, imgTask1, imgTask2, imgTask3, imgTask4] },
+    { id: 0, imgsAloneProject: [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin] },
+    { id: 1, imgsAloneProject: [imgTaskMain, imgTask1, imgTask2, imgTask3, imgTask4] },
   ]
-  const currentData = data[0]
+  const [currentData, setCurrentData] = useState(data[0])
 
   const [currentFotoProject, setCurrentFotoProject] = useState(currentData.imgsAloneProject[0])
-  /* const imgsAloneProject = [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin]*/
+
+  const handleClickLeftArrowNewProjects = () => {
+    let currentId = currentData.id
+
+    if (currentId === 0) {
+      currentId = data.length
+    }
+
+    setCurrentData(data[currentId - 1])
+    setCurrentFotoProject(data[currentId - 1].imgsAloneProject[0])
+  }
+  const handleClickRighttArrowNewProjects = () => {
+    let currentId = currentData.id
+
+    if (currentId === data.length - 1) {
+      currentId = -1
+    }
+    setCurrentData(data[currentId + 1])
+    setCurrentFotoProject(data[currentId + 1].imgsAloneProject[0])
+  }
+
   const handleClickLeftNextFotoProject = () => {
     let curentIndex = currentData.imgsAloneProject.indexOf(currentFotoProject)
 
