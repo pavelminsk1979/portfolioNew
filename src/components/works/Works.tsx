@@ -9,31 +9,42 @@ import imgSamuraiWai from '../../assets/image/fotoSamuraiWay.jpg'
 import imgMySocial from '../../assets/image/mySamuraiWai.jpg'
 import imgSamuraiWaiLogin from '../../assets/image/mySamuraiWaiLogin.jpg'
 import imgSocial from '../../assets/image/social.png'
+import imgTask1 from '../../assets/image/task1jpg.jpg'
+import imgTask2 from '../../assets/image/task2.jpg'
+import imgTask3 from '../../assets/image/task3.jpg'
+import imgTask4 from '../../assets/image/task4jpg.jpg'
+import imgTaskMain from '../../assets/image/taskMain.jpg'
 import {
   handleClickLeftArrowNewProjects,
   handleClickRighttArrowNewProjects,
 } from '../../utils/utils'
 
 export const Works = () => {
-  const [currentFotoProject, setCurrentFotoProject] = useState(imgSocial)
-  const imgsAloneProject = [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin]
+  const data = [
+    { imgsAloneProject: [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin] },
+    { imgsAloneProject: [imgTaskMain, imgTask1, imgTask2, imgTask3, imgTask4] },
+  ]
+  const currentData = data[0]
+
+  const [currentFotoProject, setCurrentFotoProject] = useState(currentData.imgsAloneProject[0])
+  /* const imgsAloneProject = [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin]*/
   const handleClickLeftNextFotoProject = () => {
-    let curentIndex = imgsAloneProject.indexOf(currentFotoProject)
+    let curentIndex = currentData.imgsAloneProject.indexOf(currentFotoProject)
 
     if (curentIndex === 0) {
-      curentIndex = imgsAloneProject.length
+      curentIndex = currentData.imgsAloneProject.length
     }
 
-    setCurrentFotoProject(imgsAloneProject[curentIndex - 1])
+    setCurrentFotoProject(currentData.imgsAloneProject[curentIndex - 1])
   }
   const handleClickRightNextFotoProject = () => {
-    let curentIndex = imgsAloneProject.indexOf(currentFotoProject)
+    let curentIndex = currentData.imgsAloneProject.indexOf(currentFotoProject)
 
-    if (curentIndex === imgsAloneProject.length - 1) {
+    if (curentIndex === currentData.imgsAloneProject.length - 1) {
       curentIndex = -1
     }
 
-    setCurrentFotoProject(imgsAloneProject[curentIndex + 1])
+    setCurrentFotoProject(currentData.imgsAloneProject[curentIndex + 1])
   }
   const handleOnclichSwitch = (nameFoto: string) => {
     setCurrentFotoProject(nameFoto)
@@ -53,7 +64,7 @@ export const Works = () => {
           <img alt={'фото проэкта '} className={st.imgProject} src={currentFotoProject} />
           <div className={st.blockSwitch}>
             <BiSolidLeftArrow className={st.arrowSwitch} onClick={handleClickLeftNextFotoProject} />
-            {imgsAloneProject.map(el => {
+            {currentData.imgsAloneProject.map(el => {
               return el === currentFotoProject ? (
                 <div className={st.activeElem} key={el} onClick={() => handleOnclichSwitch(el)} />
               ) : (
