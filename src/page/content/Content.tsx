@@ -96,7 +96,10 @@ export const Content = () => {
       <Navigation />
       <Main />
       <Scils />
-      <Header />
+      <Header
+        handleClickLeftArrowNewProjects={handleClickLeftArrowNewProjects}
+        handleClickRighttArrowNewProjects={handleClickRighttArrowNewProjects}
+      />
       <Works
         currentData={currentData}
         currentFotoProject={currentFotoProject}

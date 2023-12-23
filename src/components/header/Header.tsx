@@ -2,12 +2,15 @@ import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-ico
 
 import st from './Header.module.scss'
 
-import {
+type PropsType = {
+  handleClickLeftArrowNewProjects: () => void
+  handleClickRighttArrowNewProjects: () => void
+}
+
+export const Header = ({
   handleClickLeftArrowNewProjects,
   handleClickRighttArrowNewProjects,
-} from '../../utils/utils'
-
-export const Header = () => {
+}: PropsType) => {
   return (
     <div className={st.block}>
       <BsFillArrowLeftSquareFill
