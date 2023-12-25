@@ -47,4 +47,11 @@
 .headersTextQestion:hover {
   background-color: var(--color-dark-1000);
   box-shadow: 0 0 25px var(--color-light-100);
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.headersText:active,
+.headersTextQestion:active {
+  transform: translateY(2px);
 }

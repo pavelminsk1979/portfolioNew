@@ -40,32 +40,6 @@
   display: none; /* Скрываем обертки на маленьких экранах */
 }
 
-@media (width >= 1000px) {
-  .leftArrowWrapper,
-  .rightArrowWrapper {
-    display: block; /* Показываем обертки на экранах шире 1000px */
-  }
-}
-
-@media (width <= 1000px) {
-  .frame {
-    min-width: 100%;
-    height: 100%;
-    margin-left: 0;
-    border: 2px solid var(--color-light-300);
-    flex-direction: column-reverse;
-  }
-}
-
-@media (width <= 450px) {
-  .frame {
-    min-width: 109%;
-    height: 90%;
-    margin-left: -17px;
-    margin-top: -55px;
-  }
-}
-
 .blockTitleProjectAndTechnoloies {
   width: 30%;
   height: 90%;
@@ -133,4 +107,43 @@
 .outputButton:hover {
   background-color: var(--color-dark-1000);
   box-shadow: 0 0 15px var(--color-light-100);
+}
+
+@media (width >= 1000px) {
+  .leftArrowWrapper,
+  .rightArrowWrapper {
+    display: block; /* Показываем обертки на экранах шире 1000px */
+  }
+}
+
+@media (width <= 1000px) {
+  .frame {
+    min-width: 100%;
+    height: 1000px;
+    margin-left: 0;
+    margin-top: 425px;
+    border: 2px solid var(--color-light-300);
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .imgProject {
+    max-width: 130%;
+    margin-top: 10px;
+  }
+
+  .blockTitleProjectAndTechnoloies {
+    min-width: 90%;
+    height: 65%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (width <= 450px) {
+  .frame {
+    min-width: 109%;
+    height: 90%;
+    margin-left: -17px;
+    margin-top: -55px;
+  }
 }

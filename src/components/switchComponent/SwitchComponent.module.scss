@@ -12,6 +12,16 @@ button {
   background-color: var(--color-dark-700);
   border-radius: 9999px;
   box-shadow: 0 0 0 2px var(--color-light-100);
+  cursor: pointer;
+}
+
+.SwitchRoot:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.SwitchRoot:active {
+  transform: translateY(2px);
 }
 
 .SwitchRoot[data-state='checked'] {

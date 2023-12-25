@@ -3,7 +3,7 @@ import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-ico
 
 import st from './Works.module.scss'
 
-import { DataProject } from '../../page/content/Content'
+import { DataProject } from '../../constants/constantDataProjects'
 
 type PropsType = {
   currentData: DataProject
