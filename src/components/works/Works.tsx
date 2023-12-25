@@ -33,7 +33,15 @@ export const Works = ({
         />
       </div>
       <div className={st.frame}>
-        <div className={st.blockTitleProjectAndTechnoloies}></div>
+        <div className={st.blockTitleProjectAndTechnoloies}>
+          <p>Приложение разработано на основе следующих технологий: </p>
+          <p>{currentData.technologies}</p>
+          <br />
+          <p>Для входа в приложение можно воспользоваться: </p>
+          <span>E-mail : </span> <span>{currentData.email}</span>
+          <br />
+          <span>password : </span> <span>{currentData.password}</span>
+        </div>
         <div className={st.blockImgAndButton}>
           <img alt={'фото проэкта '} className={st.imgProject} src={currentFotoProject} />
           <div className={st.blockSwitch}>
@@ -54,7 +62,9 @@ export const Works = ({
               onClick={handleClickRightNextFotoProject}
             />
           </div>
-          <button className={st.outputButton}>ВХОД НА ПРЕЗЕНТАЦИЮ ПРОЕКТА</button>
+          <a className={st.link} href={currentData.link} rel={'noreferrer'} target={'_blank'}>
+            ВХОД НА ПРЕЗЕНТАЦИЮ ПРОЕКТА
+          </a>
         </div>
       </div>
       <div className={st.rightArrowWrapper}>

@@ -15,9 +15,30 @@ import imgTask4 from '../assets/image/task4jpg.jpg'
 import imgTaskMain from '../assets/image/taskMain.jpg'
 
 export const DATA_PROJECTS = [
-  { id: 0, imgsAloneProject: [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin] },
-  { id: 1, imgsAloneProject: [imgTaskMain, imgTask1, imgTask2, imgTask3, imgTask4] },
   {
+    email: 'pavelminsk1979@mail.ru',
+    id: 0,
+    imgsAloneProject: [imgSocial, imgSamuraiWai, imgMySocial, imgSamuraiWaiLogin],
+    link: 'https://pavelminsk1979.github.io/samurai/#/',
+    password: '1979@pav',
+    technologies:
+      '  React (классовые компоненты), Redux, CSS,  JavaScript, TypeScript. Для запросов на сервер\n' +
+      '            использовалfcm библиотекf Axios. Также в проекте реализована функциональность\n' +
+      '            логинизации с помощью библиотеки redux-form.',
+  },
+  {
+    email: 'pavelminsk1979@mail.ru',
+    id: 1,
+    imgsAloneProject: [imgTaskMain, imgTask1, imgTask2, imgTask3, imgTask4],
+    link: 'https://pavelminsk1979.github.io/mainTodolist/',
+    password: '1979@pav',
+    technologies:
+      'React, ReduxToolkit, JavaScript,\n' +
+      'TypeScript, Axios, TDD, Material-UI, логинизация с\n' +
+      'использованием библиотеки Formik',
+  },
+  {
+    email: ' pavelminsk1979@mail.ru',
     id: 2,
     imgsAloneProject: [
       imgLearnDeckMains,
@@ -27,10 +48,19 @@ export const DATA_PROJECTS = [
       imgLearnDecks4,
       imgLearnDecks5,
     ],
+    link: 'https://decks-two.vercel.app/decks',
+    password: '12345',
+    technologies:
+      ' React, RTK Query, JavaScript, TypeScript, Axios, Radix, React\n' +
+      'Hook Form+Zod, Storybook,Figma, UI Kit, Git+ GITHUB,SCSS',
   },
 ]
 
 export type DataProject = {
+  email: string
   id: number
   imgsAloneProject: string[]
+  link: string
+  password: string
+  technologies: string
 }
