@@ -4,6 +4,7 @@ import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-ico
 import st from './Works.module.scss'
 
 import { DataProject } from '../../constants/constantDataProjects'
+import { DescriptionProject } from './descriptionProject/DescriptionProject'
 
 type PropsType = {
   currentData: DataProject
@@ -33,15 +34,8 @@ export const Works = ({
         />
       </div>
       <div className={st.frame}>
-        <div className={st.blockTitleProjectAndTechnoloies}>
-          <p>Приложение разработано на основе следующих технологий: </p>
-          <p>{currentData.technologies}</p>
-          <br />
-          <p>Для входа в приложение можно воспользоваться: </p>
-          <span>E-mail : </span> <span>{currentData.email}</span>
-          <br />
-          <span>password : </span> <span>{currentData.password}</span>
-        </div>
+        <DescriptionProject currentData={currentData} />
+
         <div className={st.blockImgAndButton}>
           <img alt={'фото проэкта '} className={st.imgProject} src={currentFotoProject} />
           <div className={st.blockSwitch}>
