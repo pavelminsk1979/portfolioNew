@@ -1,9 +1,9 @@
-import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi'
 import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-icons/bs'
 
 import st from './Works.module.scss'
 
 import { DataProject } from '../../constants/constantDataProjects'
+import { BlockPicturesAndButtons } from './blockPicturesAndButtons/BlockPicturesAndButtons'
 import { DescriptionProject } from './descriptionProject/DescriptionProject'
 
 type PropsType = {
@@ -35,31 +35,13 @@ export const Works = ({
       </div>
       <div className={st.frame}>
         <DescriptionProject currentData={currentData} />
-
-        <div className={st.blockImgAndButton}>
-          <img alt={'фото проэкта '} className={st.imgProject} src={currentFotoProject} />
-          <div className={st.blockSwitch}>
-            <BiSolidLeftArrow className={st.arrowSwitch} onClick={handleClickLeftNextFotoProject} />
-            {currentData.imgsAloneProject.map(el => {
-              return el === currentFotoProject ? (
-                <div className={st.activeElem} key={el} onClick={() => handleOnclichSwitch(el)} />
-              ) : (
-                <div
-                  className={st.notActiveElem}
-                  key={el}
-                  onClick={() => handleOnclichSwitch(el)}
-                />
-              )
-            })}
-            <BiSolidRightArrow
-              className={st.arrowSwitch}
-              onClick={handleClickRightNextFotoProject}
-            />
-          </div>
-          <a className={st.link} href={currentData.link} rel={'noreferrer'} target={'_blank'}>
-            ВХОД НА ПРЕЗЕНТАЦИЮ ПРОЕКТА
-          </a>
-        </div>
+        <BlockPicturesAndButtons
+          currentData={currentData}
+          currentFotoProject={currentFotoProject}
+          handleClickLeftNextFotoProject={handleClickLeftNextFotoProject}
+          handleClickRightNextFotoProject={handleClickRightNextFotoProject}
+          handleOnclichSwitch={handleOnclichSwitch}
+        />
       </div>
       <div className={st.rightArrowWrapper}>
         <BsFillArrowRightSquareFill
