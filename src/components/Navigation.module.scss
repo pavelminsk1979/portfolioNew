@@ -67,3 +67,27 @@
 .headersTextQestion:active {
   transform: translateY(2px);
 }
+
+.menuBurger {
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+}
+
+.menuBurger:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+@media screen and (width >= 800px) {
+  .menuBurger {
+    display: none;
+  }
+}
+
+@media screen and (width <= 800px) {
+  .headersText,
+  .headersTextQestion {
+    display: none;
+  }
+}

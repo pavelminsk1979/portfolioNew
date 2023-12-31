@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 
+import { CgMenuRound } from 'react-icons/cg'
+
 import st from './Navigation.module.scss'
 
 import { SwitchComponent } from './switchComponent/SwitchComponent'
@@ -17,6 +19,7 @@ export const Navigation = () => {
   return (
     <div className={st.main}>
       <div className={st.block}>
+        <CgMenuRound className={st.menuBurger} />
         <span className={st.headersText} onClick={handleOnClickNavigate}>
           КРАТКО
         </span>
