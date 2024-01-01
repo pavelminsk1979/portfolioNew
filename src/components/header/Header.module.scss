@@ -1,12 +1,13 @@
 .block {
+  display: none;
   min-width: 85%;
   margin: 80px 0 0;
-  display: none;
 }
 
 .header {
   margin: 0;
   padding: 0;
+
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-bold);
@@ -16,9 +17,9 @@
   .block {
     display: block;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -47,5 +48,6 @@
   .rightArrow {
     width: 25px;
     height: 25px;
+    z-index: 1;
   }
 }

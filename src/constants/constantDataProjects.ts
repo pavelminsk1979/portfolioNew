@@ -13,6 +13,14 @@ import imgTask2 from '../assets/image/task2.jpg'
 import imgTask3 from '../assets/image/task3.jpg'
 import imgTask4 from '../assets/image/task4jpg.jpg'
 import imgTaskMain from '../assets/image/taskMain.jpg'
+import imgTelegiv1 from '../assets/image/telegiv1.jpg'
+import imgTelegiv2 from '../assets/image/telegiv2.jpg'
+import imgTelegiv3 from '../assets/image/telegiv3.jpg'
+import imgTelegiv4 from '../assets/image/telegiv4.jpg'
+import imgTelegivMain from '../assets/image/telegivMain.jpg'
+import imgTelegivStorybook1 from '../assets/image/telegivStor1jpg.jpg'
+import imgTelegivStorybook2 from '../assets/image/telegivStor2.jpg'
+import imgTelegivStorybook3 from '../assets/image/telegivStor3.jpg'
 
 export const DATA_PROJECTS = [
   {
@@ -53,6 +61,25 @@ export const DATA_PROJECTS = [
     technologies:
       ' React, RTK Query, JavaScript, TypeScript, Axios, Radix, React\n' +
       'Hook Form+Zod, Storybook,Figma, UI Kit, Git+ GITHUB,SCSS',
+  },
+  {
+    email: 'pavvel.potapov@gmail.com',
+    id: 3,
+    imgsAloneProject: [
+      imgTelegivMain,
+      imgTelegiv1,
+      imgTelegiv2,
+      imgTelegiv3,
+      imgTelegiv4,
+      imgTelegivStorybook1,
+      imgTelegivStorybook2,
+      imgTelegivStorybook3,
+    ],
+    link: 'https://telegiv.com/',
+    password: '12345678',
+    technologies:
+      '  React, ReduxToolkit, Axios, Material-UI, Trello,Storybook,Radix,\n' +
+      'Figma, UI Kit, Git+ GITHUB, SCSS\n',
   },
 ]
 
