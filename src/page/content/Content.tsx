@@ -3,6 +3,7 @@ import { useState } from 'react'
 import st from './Content.module.scss'
 
 import { Navigation } from '../../components/Navigation'
+import { Contact } from '../../components/contact/Contact.tsx'
 import { Header } from '../../components/header/Header'
 import { Main } from '../../components/main/Main'
 import { Scils } from '../../components/scils/Scils'
@@ -74,6 +75,7 @@ export const Content = () => {
         handleClickRighttArrowNewProjects={handleClickRighttArrowNewProjects}
         handleOnclichSwitch={handleOnclichSwitch}
       />
+      <Contact />
     </div>
   )
 }
