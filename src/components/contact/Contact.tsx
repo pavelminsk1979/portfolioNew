@@ -1,4 +1,5 @@
 import st from './Contact.module.scss'
+import { FormSendMessage } from './formSendMessage/FormSendMessage.tsx'
 
 export const Contact = () => {
   return (
@@ -8,7 +9,8 @@ export const Contact = () => {
         <div className={st.minBlockLink}>2</div>
         <div className={st.minBlockLink}>3</div>
       </div>
-      <div className={st.blockForm}></div>
+
+      <FormSendMessage />
     </div>
   )
 }
