@@ -79,8 +79,20 @@
   transition: 0.5s;
 }
 
+.iconClose {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.iconClose:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 @media screen and (width >= 800px) {
-  .menuBurger {
+  .menuBurger,
+  .iconClose {
     display: none;
   }
 }
