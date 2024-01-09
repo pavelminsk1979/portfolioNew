@@ -1,12 +1,12 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { CgMenuRound } from 'react-icons/cg'
+import { SlClose } from 'react-icons/sl'
 
 import st from './Navigation.module.scss'
 
 import { SwitchComponent } from './switchComponent/SwitchComponent'
-import { SlClose } from 'react-icons/sl'
-import { useState } from 'react'
 
 export const Navigation = () => {
   const navigate = useNavigate()
