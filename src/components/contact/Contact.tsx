@@ -10,12 +10,18 @@ export const Contact = () => {
       <div className={st.blocLink}>
         <div className={st.minBlockLink}>
           <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgPhone} />
+          <span className={st.contactPhoneTelegrMail}>+375 29 645 78 48</span>
         </div>
         <div className={st.minBlockLink}>
-          <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgTelegram} />
+          <a href={'https://t.me/pavvelpotapov'}>
+            <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgTelegram} />
+          </a>
+
+          <span className={st.contactPhoneTelegrMail}>https://t.me/pavvelpotapov</span>
         </div>
         <div className={st.minBlockLink}>
           <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgMail} />
+          <span className={st.contactPhoneTelegrMail}>pavvel.potapov@gmail.com</span>
         </div>
       </div>
 
