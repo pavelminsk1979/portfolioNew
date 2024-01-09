@@ -1,16 +1,19 @@
 .blockFotoAndInfo {
-  min-width: 75%;
   display: flex;
   justify-content: space-between;
+
+  min-width: 75%;
+  margin: 35px;
+  padding: 25px;
+
   border: 3px solid var(--color-light-300);
   border-radius: 20px;
-  padding: 25px;
-  margin: 35px;
 }
 
 .text {
   width: 500px;
   height: 300px;
+
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-bold);
@@ -19,25 +22,30 @@
 }
 
 .foto {
-  width: 380px;
-  height: 380px;
-  border-radius: 250px;
-  background-position: center;
-  background-size: 90%;
   position: relative;
   z-index: 1;
+
+  width: 380px;
+  height: 380px;
+
+  background-position: center;
+  background-size: 90%;
+  border-radius: 250px;
 }
 
 .foto::before {
-  position: absolute;
   content: '';
-  width: 400px;
-  height: 400px;
-  border-radius: 250px;
+
+  position: absolute;
+  z-index: -1;
   top: -5px;
   left: -10px;
+
+  width: 400px;
+  height: 400px;
+
   border: 18px solid var(--color-light-100);
-  z-index: -1;
+  border-radius: 250px;
 }
 
 @media screen and (width <= 1000px) {
@@ -50,14 +58,15 @@
 
 @media screen and (width <= 700px) {
   .blockFotoAndInfo {
-    border: none;
     margin: 5px;
     padding: 5px 5px 25px;
+    border: none;
   }
 
   .text {
     width: 95%;
     height: 100%;
+
     font-family: var(--font-family-primary);
     font-size: var(--font-size-xxl);
     text-align: center;

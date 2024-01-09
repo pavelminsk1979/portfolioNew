@@ -26,7 +26,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <FormSendMessage />
+      <FormSendMessage isUseForModal={false} />
     </div>
   )
 }

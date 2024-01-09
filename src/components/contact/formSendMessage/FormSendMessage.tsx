@@ -4,7 +4,11 @@ import emailjs from '@emailjs/browser'
 
 import st from '../Contact.module.scss'
 
-export const FormSendMessage = () => {
+type Props = {
+  isUseForModal: boolean
+}
+
+export const FormSendMessage = ({ isUseForModal }: Props) => {
   const form = useRef(null)
 
   const sendEmail = (e: any) => {
@@ -30,21 +34,27 @@ export const FormSendMessage = () => {
   }
 
   return (
-    <form className={st.blockForm} onSubmit={sendEmail} ref={form}>
-      <input className={st.input} name={'name'} placeholder={'Имя'} type={'text'} />
+    <form
+      className={isUseForModal ? st.blockFormForModal : st.blockForm}
+      onSubmit={sendEmail}
+      ref={form}
+    >
+      {!isUseForModal && (
+        <input className={st.input} name={'name'} placeholder={'Имя'} type={'text'} />
+      )}
       <input
-        className={st.input}
+        className={isUseForModal ? st.inputForModal : st.input}
         name={'subject'}
         placeholder={'Адрес почты или Telegram'}
         type={'text'}
       />
       <textarea
-        className={st.textarea}
+        className={isUseForModal ? st.textareaForModal : st.textarea}
         name={'message'}
         placeholder={'Сообщение'}
         required
       ></textarea>
-      <button className={st.button} type={'submit'}>
+      <button className={isUseForModal ? st.buttonForModal : st.button} type={'submit'}>
         ОТПРАВИТЬ СООБЩЕНИЕ
       </button>
     </form>

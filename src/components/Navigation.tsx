@@ -54,7 +54,7 @@ export const Navigation = () => {
           ЗАДАТЬ ВОПРОС
         </span>
         <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
-          <FormSendMessage />
+          <FormSendMessage isUseForModal />
         </Modal>
         <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
       </div>
