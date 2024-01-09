@@ -6,11 +6,16 @@ import { SlClose } from 'react-icons/sl'
 
 import st from './Navigation.module.scss'
 
+import { FormSendMessage } from './contact/formSendMessage/FormSendMessage'
+import { Modal } from './modal/Modal'
 import { SwitchComponent } from './switchComponent/SwitchComponent'
 
 export const Navigation = () => {
   const navigate = useNavigate()
   const [isOpenMenuMobile, setIsOpenMenuMobile] = useState(false)
+
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
   const handleOnClickNavigate = () => {
     navigate('/info')
   }
@@ -27,6 +32,10 @@ export const Navigation = () => {
     setIsOpenMenuMobile(false)
   }
 
+  const handleOpenModal = () => {
+    setIsOpenModal(true)
+  }
+
   return (
     <div className={st.main}>
       <div className={st.block}>
@@ -41,7 +50,12 @@ export const Navigation = () => {
         </span>
         <span className={st.headersText}>ПРОЕКТЫ</span>
         <span className={st.headersText}>КОНТАКТЫ</span>
-        <span className={st.headersTextQestion}>ЗАДАТЬ ВОПРОС</span>
+        <span className={st.headersTextQestion} onClick={handleOpenModal}>
+          ЗАДАТЬ ВОПРОС
+        </span>
+        <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+          <FormSendMessage />
+        </Modal>
         <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
       </div>
     </div>

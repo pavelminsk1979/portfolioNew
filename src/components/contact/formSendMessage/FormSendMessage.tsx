@@ -1,6 +1,8 @@
-import st from '../Contact.module.scss'
 import { useRef } from 'react'
+
 import emailjs from '@emailjs/browser'
+
+import st from '../Contact.module.scss'
 
 export const FormSendMessage = () => {
   const form = useRef(null)
@@ -8,7 +10,9 @@ export const FormSendMessage = () => {
   const sendEmail = (e: any) => {
     e.preventDefault()
 
-    if (!form.current) return
+    if (!form.current) {
+      return
+    }
 
     emailjs.sendForm('service_b411dhd', 'template_smq3ouy', form.current, 'XFYYbCE5Onbqy9kvu').then(
       result => {
@@ -26,7 +30,7 @@ export const FormSendMessage = () => {
   }
 
   return (
-    <form className={st.blockForm} ref={form} onSubmit={sendEmail}>
+    <form className={st.blockForm} onSubmit={sendEmail} ref={form}>
       <input className={st.input} name={'name'} placeholder={'Имя'} type={'text'} />
       <input
         className={st.input}
@@ -35,10 +39,10 @@ export const FormSendMessage = () => {
         type={'text'}
       />
       <textarea
-        required
         className={st.textarea}
         name={'message'}
         placeholder={'Сообщение'}
+        required
       ></textarea>
       <button className={st.button} type={'submit'}>
         ОТПРАВИТЬ СООБЩЕНИЕ

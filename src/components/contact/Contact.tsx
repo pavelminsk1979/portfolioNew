@@ -1,26 +1,27 @@
 import st from './Contact.module.scss'
-import { FormSendMessage } from './formSendMessage/FormSendMessage.tsx'
+
+import imgMail from '../../assets/image/mail.png'
 import imgPhone from '../../assets/image/phone.png'
 import imgTelegram from '../../assets/image/telegr.jpg'
-import imgMail from '../../assets/image/mail.png'
+import { FormSendMessage } from './formSendMessage/FormSendMessage'
 
 export const Contact = () => {
   return (
     <div className={st.main}>
       <div className={st.blocLink}>
         <div className={st.minBlockLink}>
-          <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgPhone} />
+          <img alt={'фото телефона '} className={st.imgPhoneTelegramMail} src={imgPhone} />
           <span className={st.contactPhoneTelegrMail}>+375 29 645 78 48</span>
         </div>
         <div className={st.minBlockLink}>
           <a href={'https://t.me/pavvelpotapov'}>
-            <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgTelegram} />
+            <img alt={'фото телеграм '} className={st.imgPhoneTelegramMail} src={imgTelegram} />
           </a>
 
           <span className={st.contactPhoneTelegrMail}>https://t.me/pavvelpotapov</span>
         </div>
         <div className={st.minBlockLink}>
-          <img alt={'фото проэкта '} className={st.imgPhoneTelegramMail} src={imgMail} />
+          <img alt={'фото почты '} className={st.imgPhoneTelegramMail} src={imgMail} />
           <span className={st.contactPhoneTelegrMail}>pavvel.potapov@gmail.com</span>
         </div>
       </div>

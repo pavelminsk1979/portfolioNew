@@ -6,7 +6,6 @@ import { Navigation } from '../../components/Navigation'
 import { Contact } from '../../components/contact/Contact'
 import { Header } from '../../components/header/Header'
 import { Main } from '../../components/main/Main'
-import { Modal } from '../../components/modal/Modal'
 import { Scils } from '../../components/scils/Scils'
 import { Works } from '../../components/works/Works'
 import { DATA_PROJECTS } from '../../constants/constantDataProjects'
@@ -60,7 +59,6 @@ export const Content = () => {
 
   return (
     <div className={st.main}>
-      <Modal>333</Modal>
       <Navigation />
       <Main />
       <Scils />

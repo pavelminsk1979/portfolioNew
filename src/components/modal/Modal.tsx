@@ -7,24 +7,27 @@ import st from './Modal.module.scss'
 
 type PropsType = {
   children: ReactNode
+  isOpenModal: boolean
+  setIsOpenModal: (value: boolean) => void
 }
-export const Modal = ({ children }: PropsType) => (
-  <Dialog.Root>
-    <Dialog.Trigger asChild>
-      <button>Имя кнопки</button>
-    </Dialog.Trigger>
-    <Dialog.Portal>
-      <Dialog.Overlay className={st.DialogOverlay} />
-      <Dialog.Content className={st.DialogContent}>
-        <Dialog.Title className={st.DialogTitle}>Заголовок</Dialog.Title>
-        <Dialog.Description className={st.DialogDescription}>Какойто текст</Dialog.Description>
-        {children}
-        <Dialog.Close>
-          <button className={st.IconButton}>
-            <Cross2Icon />
-          </button>
-        </Dialog.Close>
-      </Dialog.Content>
-    </Dialog.Portal>
-  </Dialog.Root>
-)
+export const Modal = ({ children, isOpenModal, setIsOpenModal }: PropsType) => {
+  const handleCloseModal = () => {
+    setIsOpenModal(false)
+  }
+
+  return (
+    <Dialog.Root onOpenChange={handleCloseModal} open={isOpenModal}>
+      <Dialog.Portal>
+        <Dialog.Overlay className={st.DialogOverlay} />
+        <Dialog.Content className={st.DialogContent}>
+          {children}
+          <Dialog.Close>
+            <button className={st.IconButton}>
+              <Cross2Icon />
+            </button>
+          </Dialog.Close>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
+  )
+}
