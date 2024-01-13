@@ -50,7 +50,7 @@ export const Navigation = () => {
           КРАТКО
         </span>
 
-        <Link className={st.headersText} offset={-70} smooth to={'works'}>
+        <Link className={st.headersText} offset={-60} smooth to={'works'}>
           ПРОЕКТЫ
         </Link>
         <Link className={st.headersText} smooth to={'contact'}>
