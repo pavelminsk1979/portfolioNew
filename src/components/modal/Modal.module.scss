@@ -4,9 +4,9 @@ button {
 
 .DialogOverlay {
   position: fixed;
-  inset: 0;
-  background-color: rgb(39 39 39 / 80%);
   z-index: 1;
+  inset: 0;
+  background-color: rgb(29 29 29 / 90%);
 }
 
 .DialogContent {
@@ -19,9 +19,8 @@ button {
   width: 500px;
   height: 400px;
 
-  color: black;
-
-  background-color: white;
+  border: 2px solid #fbdc87;
+  background-color: #232528;
   border-radius: 10px;
 }
 
@@ -29,5 +28,5 @@ button {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: green;
+  color: #fbdc87;
 }

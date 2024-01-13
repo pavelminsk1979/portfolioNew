@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 30px;
+  padding: 50px 30px 30px;
   height: 100%;
 }
 
@@ -70,6 +70,15 @@
   border-radius: 5px;
 }
 
+.inputForModal {
+  outline: none;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #383b40;
+  border: 2px solid #fee5ac;
+  color: #fee5ac;
+}
+
 .textarea {
   resize: none;
 
@@ -80,6 +89,16 @@
   background-color: var(--color-dark-700);
   border: 2px solid var(--color-light-300);
   border-radius: 5px;
+}
+
+.textareaForModal {
+  outline: none;
+  resize: none;
+  height: 160px;
+  border-radius: 5px;
+  background-color: #383b40;
+  border: 2px solid #fee5ac;
+  color: #fee5ac;
 }
 
 .button {
@@ -110,6 +129,30 @@
 }
 
 .button:active {
+  transform: translateY(-2px);
+}
+
+.buttonForModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 215px;
+  height: 45px;
+  background-color: #202224;
+  border: 2px solid #2b2d32;
+  border-radius: 8px;
+  color: #fee5ac;
+}
+
+.buttonForModal:hover {
+  transform: translateY(2px);
+  background-color: #1d1e20;
+  box-shadow: 0 0 15px #fee5ac;
+  transition: 0.5s;
+}
+
+.buttonForModal:active {
   transform: translateY(-2px);
 }
 
