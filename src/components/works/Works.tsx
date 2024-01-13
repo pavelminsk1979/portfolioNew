@@ -26,7 +26,7 @@ export const Works = ({
   handleOnclichSwitch,
 }: PropsType) => {
   return (
-    <div className={st.main}>
+    <div className={st.main} id={'works'}>
       <div className={st.leftArrowWrapper}>
         <BsFillArrowLeftSquareFill
           className={st.leftArrowBig}

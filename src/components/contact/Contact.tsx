@@ -7,7 +7,7 @@ import { FormSendMessage } from './formSendMessage/FormSendMessage'
 
 export const Contact = () => {
   return (
-    <div className={st.main}>
+    <div className={st.main} id={'contact'}>
       <div className={st.blocLink}>
         <div className={st.minBlockLink}>
           <img alt={'фото телефона '} className={st.imgPhoneTelegramMail} src={imgPhone} />

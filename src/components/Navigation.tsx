@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 import { CgMenuRound } from 'react-icons/cg'
 import { SlClose } from 'react-icons/sl'
@@ -48,8 +49,13 @@ export const Navigation = () => {
         <span className={st.headersText} onClick={handleOnClickNavigate}>
           КРАТКО
         </span>
-        <span className={st.headersText}>ПРОЕКТЫ</span>
-        <span className={st.headersText}>КОНТАКТЫ</span>
+
+        <Link className={st.headersText} offset={-70} smooth to={'works'}>
+          ПРОЕКТЫ
+        </Link>
+        <Link className={st.headersText} smooth to={'contact'}>
+          КОНТАКТЫ
+        </Link>
         <span className={st.headersTextQestion} onClick={handleOpenModal}>
           ЗАДАТЬ ВОПРОС
         </span>
