@@ -17,6 +17,7 @@ export const Navigation = () => {
 
   const [isOpenModal, setIsOpenModal] = useState(false)
 
+  const [isButtonOne, setIsButtonOne] = useState(false)
   const handleOnClickNavigate = () => {
     navigate('/info')
   }
@@ -27,10 +28,14 @@ export const Navigation = () => {
 
   const handleOpenMenuMobile = () => {
     setIsOpenMenuMobile(true)
+    setTimeout(() => {
+      setIsButtonOne(true)
+    }, 800)
   }
 
   const handleCloseMenuMobile = () => {
     setIsOpenMenuMobile(false)
+    setIsButtonOne(false)
   }
 
   const handleOpenModal = () => {
@@ -43,35 +48,37 @@ export const Navigation = () => {
       {isOpenMenuMobile ? (
         <div className={st.blockMenuMobileIconAndButton}>
           <SlClose className={st.iconClose} onClick={handleCloseMenuMobile} />
-          <div className={st.blockMenuMobileButton}>
-            <span className={st.buttonForMenuModal} onClick={handleOnClickNavigate}>
-              КРАТКО
-            </span>
+          {isButtonOne && (
+            <div className={st.blockMenuMobileButton}>
+              <span className={st.buttonForMenuModal} onClick={handleOnClickNavigate}>
+                КРАТКО
+              </span>
 
-            <Link
-              className={st.buttonForMenuModal}
-              offset={-60}
-              onClick={handleCloseMenuMobile}
-              smooth
-              to={'works'}
-            >
-              ПРОЕКТЫ
-            </Link>
-            <Link
-              className={st.buttonForMenuModal}
-              onClick={handleCloseMenuMobile}
-              smooth
-              to={'contact'}
-            >
-              КОНТАКТЫ
-            </Link>
-            <span className={st.buttonForMenuModal} onClick={handleOpenModal}>
-              ЗАДАТЬ ВОПРОС
-            </span>
-            <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
-              <FormSendMessage isUseForModal />
-            </Modal>
-          </div>
+              <Link
+                className={st.buttonForMenuModal}
+                offset={-60}
+                onClick={handleCloseMenuMobile}
+                smooth
+                to={'works'}
+              >
+                ПРОЕКТЫ
+              </Link>
+              <Link
+                className={st.buttonForMenuModal}
+                onClick={handleCloseMenuMobile}
+                smooth
+                to={'contact'}
+              >
+                КОНТАКТЫ
+              </Link>
+              <span className={st.buttonForMenuModal} onClick={handleOpenModal}>
+                ЗАДАТЬ ВОПРОС
+              </span>
+              <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+                <FormSendMessage isUseForModal />
+              </Modal>
+            </div>
+          )}
         </div>
       ) : (
         <div className={st.block}>
