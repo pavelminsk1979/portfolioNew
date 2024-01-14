@@ -7,6 +7,52 @@
   margin: 15px;
 }
 
+.blockMenuMobileIconAndButton {
+  position: fixed;
+  z-index: 9999;
+  top: -100%;
+  left: 0;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(40 39 39 / 95%);
+
+  transition: 1s;
+}
+
+.blockMenuMobileButton {
+  /*  border: 2px solid #fee5ac;
+  border-radius: 10px;*/
+  margin: 80px 60px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.buttonForMenuModal {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  height: 60px;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+
+  background-color: #202224;
+  border: 2px solid #303338;
+  border-radius: 15px;
+  color: #fee5ac;
+}
+
 .block {
   display: flex;
   align-items: center;
@@ -21,7 +67,6 @@
 
 .headersText {
   cursor: pointer;
-  text-decoration: none;
 
   display: flex;
   align-items: center;
@@ -33,10 +78,11 @@
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
+  text-decoration: none;
 
+  background-color: var(--color-dark-950);
   border: 2px solid var(--color-dark-700);
   border-radius: 15px;
-  background-color: var(--color-dark-950);
 }
 
 .headersTextQestion {
@@ -53,9 +99,9 @@
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
 
+  background-color: var(--color-dark-950);
   border: 2px solid var(--color-dark-700);
   border-radius: 15px;
-  background-color: var(--color-dark-950);
 }
 
 .headersText:hover,
@@ -72,9 +118,9 @@
 }
 
 .menuBurger {
+  cursor: pointer;
   width: 41px;
   height: 41px;
-  cursor: pointer;
 }
 
 .menuBurger:hover {
@@ -83,9 +129,12 @@
 }
 
 .iconClose {
+  cursor: pointer;
   width: 36px;
   height: 36px;
-  cursor: pointer;
+  color: #fee5ac;
+  margin-top: 20px;
+  margin-left: 110px;
 }
 
 .iconClose:hover {
@@ -94,8 +143,7 @@
 }
 
 @media screen and (width >= 800px) {
-  .menuBurger,
-  .iconClose {
+  .menuBurger {
     display: none;
   }
 }

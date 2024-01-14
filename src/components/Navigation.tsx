@@ -25,45 +25,77 @@ export const Navigation = () => {
     document.body.classList.toggle('dark-mode', checked)
   }
 
-  const handleCgMenuRoundIconClick = () => {
+  const handleOpenMenuMobile = () => {
     setIsOpenMenuMobile(true)
   }
 
-  const handleSlCloseIconClick = () => {
+  const handleCloseMenuMobile = () => {
     setIsOpenMenuMobile(false)
   }
 
   const handleOpenModal = () => {
+    setIsOpenMenuMobile(false)
     setIsOpenModal(true)
   }
 
   return (
     <div className={st.main}>
-      <div className={st.block}>
-        {isOpenMenuMobile ? (
-          <SlClose className={st.iconClose} onClick={handleSlCloseIconClick} />
-        ) : (
-          <CgMenuRound className={st.menuBurger} onClick={handleCgMenuRoundIconClick} />
-        )}
+      {isOpenMenuMobile ? (
+        <div className={st.blockMenuMobileIconAndButton}>
+          <SlClose className={st.iconClose} onClick={handleCloseMenuMobile} />
+          <div className={st.blockMenuMobileButton}>
+            <span className={st.buttonForMenuModal} onClick={handleOnClickNavigate}>
+              КРАТКО
+            </span>
 
-        <span className={st.headersText} onClick={handleOnClickNavigate}>
-          КРАТКО
-        </span>
+            <Link
+              className={st.buttonForMenuModal}
+              offset={-60}
+              onClick={handleCloseMenuMobile}
+              smooth
+              to={'works'}
+            >
+              ПРОЕКТЫ
+            </Link>
+            <Link
+              className={st.buttonForMenuModal}
+              onClick={handleCloseMenuMobile}
+              smooth
+              to={'contact'}
+            >
+              КОНТАКТЫ
+            </Link>
+            <span className={st.buttonForMenuModal} onClick={handleOpenModal}>
+              ЗАДАТЬ ВОПРОС
+            </span>
+            <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+              <FormSendMessage isUseForModal />
+            </Modal>
+          </div>
+        </div>
+      ) : (
+        <div className={st.block}>
+          <CgMenuRound className={st.menuBurger} onClick={handleOpenMenuMobile} />
 
-        <Link className={st.headersText} offset={-60} smooth to={'works'}>
-          ПРОЕКТЫ
-        </Link>
-        <Link className={st.headersText} smooth to={'contact'}>
-          КОНТАКТЫ
-        </Link>
-        <span className={st.headersTextQestion} onClick={handleOpenModal}>
-          ЗАДАТЬ ВОПРОС
-        </span>
-        <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
-          <FormSendMessage isUseForModal />
-        </Modal>
-        <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
-      </div>
+          <span className={st.headersText} onClick={handleOnClickNavigate}>
+            КРАТКО
+          </span>
+
+          <Link className={st.headersText} offset={-60} smooth to={'works'}>
+            ПРОЕКТЫ
+          </Link>
+          <Link className={st.headersText} smooth to={'contact'}>
+            КОНТАКТЫ
+          </Link>
+          <span className={st.headersTextQestion} onClick={handleOpenModal}>
+            ЗАДАТЬ ВОПРОС
+          </span>
+          <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+            <FormSendMessage isUseForModal />
+          </Modal>
+          <SwitchComponent handlerOnChackedChange={handlerOnChackedChange} />
+        </div>
+      )}
     </div>
   )
 }
