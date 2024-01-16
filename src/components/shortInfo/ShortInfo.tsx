@@ -8,6 +8,7 @@ export const ShortInfo = () => {
   const navigate = useNavigate()
 
   const handleOnClickNavigate = () => {
+    document.body.classList.toggle('dark-mode', false)
     navigate('/')
   }
 
@@ -39,8 +40,6 @@ export const ShortInfo = () => {
                 Toolkit,RTK Query,JavaScript,TypeScript, GIT , SCSS. Покрытие кода тестами.Имею опыт
                 работы с различными UI-библиотеками.Опыт работы в комерческой разработке 1 год 6
                 месяцев. <br /> pavvel.potapov@gmail.com
-                {/*   <br />
-                https://t.me/pavvelpotapov*/}
               </p>
             </div>
           </div>

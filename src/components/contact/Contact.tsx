@@ -14,7 +14,7 @@ export const Contact = () => {
           <span className={st.contactPhoneTelegrMail}>+375 29 645 78 48</span>
         </div>
         <div className={st.minBlockLink}>
-          <a href={'https://t.me/pavvelpotapov'}>
+          <a className={st.linkTelegram} href={'https://t.me/pavvelpotapov'}>
             <img alt={'фото телеграм '} className={st.imgPhoneTelegramMail} src={imgTelegram} />
           </a>
 

@@ -32,15 +32,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 30px 30px;
+
   height: 100%;
+  padding: 50px 30px 30px;
 }
 
 .minBlockLink {
+  display: flex;
+  align-items: center;
+
   width: 100%;
   height: 90px;
+
   border: 2px solid var(--color-light-300);
   border-radius: 10px;
+}
+
+.linkTelegram {
   display: flex;
   align-items: center;
 }
@@ -71,12 +79,14 @@
 }
 
 .inputForModal {
-  outline: none;
   height: 40px;
-  border-radius: 5px;
+
+  color: #fee5ac;
+
   background-color: #383b40;
   border: 2px solid #fee5ac;
-  color: #fee5ac;
+  border-radius: 5px;
+  outline: none;
 }
 
 .textarea {
@@ -92,13 +102,16 @@
 }
 
 .textareaForModal {
-  outline: none;
   resize: none;
+
   height: 160px;
-  border-radius: 5px;
+
+  color: #fee5ac;
+
   background-color: #383b40;
   border: 2px solid #fee5ac;
-  color: #fee5ac;
+  border-radius: 5px;
+  outline: none;
 }
 
 .button {
@@ -116,9 +129,9 @@
   font-weight: var(--font-weight-bold);
   text-decoration: none;
 
+  background-color: var(--color-dark-950);
   border: 2px solid var(--color-dark-700);
   border-radius: 8px;
-  background-color: var(--color-dark-950);
 }
 
 .button:hover {
@@ -133,16 +146,20 @@
 }
 
 .buttonForModal {
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+
   width: 215px;
   height: 45px;
+
+  color: #fee5ac;
+
   background-color: #202224;
   border: 2px solid #2b2d32;
   border-radius: 8px;
-  color: #fee5ac;
 }
 
 .buttonForModal:hover {
@@ -165,16 +182,17 @@
 
 @media (width <= 720px) {
   .main {
-    min-width: 95%;
     flex-direction: column-reverse;
-    align-items: center;
     gap: 50px;
+    align-items: center;
+
+    min-width: 95%;
     margin-top: 505px;
   }
 
   .blockForm {
-    border: 1px solid var(--color-light-300);
     width: 94%;
+    border: 1px solid var(--color-light-300);
   }
 
   .blocLink {
