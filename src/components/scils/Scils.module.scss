@@ -101,7 +101,7 @@
 @media screen and (width <= 450px) {
   .main {
     gap: 5px;
-    width: 85%;
+    width: 95%;
   }
 
   .textWraper {
@@ -111,7 +111,7 @@
 
   .text {
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
   }
 
@@ -120,15 +120,15 @@
     top: 15px;
     left: 9px;
 
-    width: 45px;
-    height: 42px;
+    width: 50px;
+    height: 48px;
 
     border: 5px solid var(--color-dark-900);
   }
 
   .icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 }
 
