@@ -159,7 +159,7 @@
 @media screen and (width <= 1000px) {
   .main {
     min-width: 90%;
-    margin-top: 430px;
+    margin-top: 480px;
   }
 }
 
@@ -169,7 +169,7 @@
     flex-direction: column-reverse;
     align-items: center;
     gap: 50px;
-    margin-top: 460px;
+    margin-top: 505px;
   }
 
   .blockForm {
@@ -179,6 +179,12 @@
 
   .blocLink {
     width: 94%;
+  }
+}
+
+@media (width <= 450px) {
+  .main {
+    margin-top: 430px;
   }
 }
 
