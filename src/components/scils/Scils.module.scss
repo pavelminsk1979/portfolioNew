@@ -43,7 +43,27 @@
   height: 55px;
 }
 
-.skillItem:hover .textWraper {
+.skillItem:hover .textWraper,
+.skillItem:active .textWraper,
+.skillItem:focus .textWraper {
+  box-shadow: 0 5px 10px var(--color-light-100);
+}
+
+.skillItem:hover .icon,
+.skillItem:active .icon,
+.skillItem:focus .icon {
+  transform: scale(105%);
+  transition: transform 0.5s;
+}
+
+.skillItem:hover .text,
+.skillItem:active .text,
+.skillItem:focus .text {
+  color: var(--color-light-50);
+  transition: transform 0.5s;
+}
+
+/*.skillItem:hover .textWraper {
   box-shadow: 0 5px 10px var(--color-light-100);
 }
 
@@ -55,7 +75,7 @@
 .skillItem:hover .text {
   color: var(--color-light-50);
   transition: transform 0.5s;
-}
+}*/
 
 @media screen and (width <= 930px) {
   .textWraper {

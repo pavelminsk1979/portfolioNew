@@ -40,6 +40,7 @@ export const Navigation = () => {
 
   const handleOpenModal = () => {
     setIsOpenMenuMobile(false)
+    setIsButtonOne(false)
     setIsOpenModal(true)
   }
 
