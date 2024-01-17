@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Zoom } from 'react-awesome-reveal'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-scroll'
 
@@ -48,38 +49,40 @@ export const Navigation = () => {
     <div className={st.main}>
       {isOpenMenuMobile ? (
         <div className={st.blockMenuMobileIconAndButton}>
-          <SlClose className={st.iconClose} onClick={handleCloseMenuMobile} />
-          {isButtonOne && (
-            <div className={st.blockMenuMobileButton}>
-              <span className={st.buttonForMenuModal} onClick={handleOnClickNavigate}>
-                КРАТКО
-              </span>
+          <Zoom>
+            <SlClose className={st.iconClose} onClick={handleCloseMenuMobile} />
+            {isButtonOne && (
+              <div className={st.blockMenuMobileButton}>
+                <span className={st.buttonForMenuModal} onClick={handleOnClickNavigate}>
+                  КРАТКО
+                </span>
 
-              <Link
-                className={st.buttonForMenuModal}
-                offset={-60}
-                onClick={handleCloseMenuMobile}
-                smooth
-                to={'works'}
-              >
-                ПРОЕКТЫ
-              </Link>
-              <Link
-                className={st.buttonForMenuModal}
-                onClick={handleCloseMenuMobile}
-                smooth
-                to={'contact'}
-              >
-                КОНТАКТЫ
-              </Link>
-              <span className={st.buttonForMenuModal} onClick={handleOpenModal}>
-                ЗАДАТЬ ВОПРОС
-              </span>
-              <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
-                <FormSendMessage isUseForModal />
-              </Modal>
-            </div>
-          )}
+                <Link
+                  className={st.buttonForMenuModal}
+                  offset={-60}
+                  onClick={handleCloseMenuMobile}
+                  smooth
+                  to={'works'}
+                >
+                  ПРОЕКТЫ
+                </Link>
+                <Link
+                  className={st.buttonForMenuModal}
+                  onClick={handleCloseMenuMobile}
+                  smooth
+                  to={'contact'}
+                >
+                  КОНТАКТЫ
+                </Link>
+                <span className={st.buttonForMenuModal} onClick={handleOpenModal}>
+                  ЗАДАТЬ ВОПРОС
+                </span>
+                <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+                  <FormSendMessage isUseForModal />
+                </Modal>
+              </div>
+            )}
+          </Zoom>
         </div>
       ) : (
         <div className={st.block}>
