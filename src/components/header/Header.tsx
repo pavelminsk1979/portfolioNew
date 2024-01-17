@@ -1,3 +1,5 @@
+import { Zoom } from 'react-awesome-reveal'
+
 import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-icons/bs'
 
 import st from './Header.module.scss'
@@ -17,7 +19,9 @@ export const Header = ({
         className={st.leftArrow}
         onClick={handleClickLeftArrowNewProjects}
       />
-      <h2 className={st.header}>ПРОЕКТЫ</h2>
+      <h2 className={st.header}>
+        <Zoom>ПРОЕКТЫ</Zoom>
+      </h2>
       <BsFillArrowRightSquareFill
         className={st.rightArrow}
         onClick={handleClickRighttArrowNewProjects}

@@ -1,3 +1,5 @@
+import { Zoom } from 'react-awesome-reveal'
+
 import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi'
 
 import st from '../Works.module.scss'
@@ -34,7 +36,7 @@ export const BlockPicturesAndButtons = ({
         <BiSolidRightArrow className={st.arrowSwitch} onClick={handleClickRightNextFotoProject} />
       </div>
       <a className={st.link} href={currentData.link} rel={'noreferrer'} target={'_blank'}>
-        ВХОД НА ПРЕЗЕНТАЦИЮ ПРОЕКТА
+        <Zoom>ВХОД НА ПРЕЗЕНТАЦИЮ ПРОЕКТА</Zoom>
       </a>
     </div>
   )
